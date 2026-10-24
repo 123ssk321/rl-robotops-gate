@@ -1,0 +1,675 @@
+{
+  "project_slug": "robotops-gate",
+  "first_public_result_month": 4,
+  "total_hours": 552,
+  "reserve_hours": 216,
+  "status": "queued",
+  "milestones": [
+    {
+      "id": "RO-M1",
+      "title": "Scope, rights and laptop feasibility",
+      "description": "Relative to explicit activation: Month 1; 56 task hours + 24 reserve; cumulative 80 hours. Tasks RO-001–RO-006. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Month 1",
+      "work_hours": 56,
+      "reserve_hours": 24,
+      "cumulative_hours": 80
+    },
+    {
+      "id": "RO-M2",
+      "title": "Internal end-to-end slice",
+      "description": "Relative to explicit activation: Months 2–3; 56 task hours + 24 reserve; cumulative 160 hours. Tasks RO-007–RO-012. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Months 2–3",
+      "work_hours": 56,
+      "reserve_hours": 24,
+      "cumulative_hours": 160
+    },
+    {
+      "id": "RO-M3",
+      "title": "First functional public alpha",
+      "description": "Relative to explicit activation: Month 4; 56 task hours + 24 reserve; cumulative 240 hours. Tasks RO-013–RO-018. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Month 4",
+      "work_hours": 56,
+      "reserve_hours": 24,
+      "cumulative_hours": 240
+    },
+    {
+      "id": "RO-M4",
+      "title": "Baselines, held-out evaluation and RL decision",
+      "description": "Relative to explicit activation: Months 5–7; 56 task hours + 48 reserve; cumulative 344 hours. Tasks RO-019–RO-024. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Months 5–7",
+      "work_hours": 56,
+      "reserve_hours": 48,
+      "cumulative_hours": 344
+    },
+    {
+      "id": "RO-M5",
+      "title": "Reliability and local product interfaces",
+      "description": "Relative to explicit activation: Months 9–11; 56 task hours + 48 reserve; cumulative 448 hours. Tasks RO-025–RO-030. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Months 9–11",
+      "work_hours": 56,
+      "reserve_hours": 48,
+      "cumulative_hours": 448
+    },
+    {
+      "id": "RO-M6",
+      "title": "Stable release and product decision",
+      "description": "Relative to explicit activation: Month 12; 56 task hours + 48 reserve; cumulative 552 hours. Tasks RO-031–RO-036. Exit requires reviewed acceptance evidence for every assigned task and a continue/reduce/stop decision. Dates stay blank while queued.",
+      "window": "Month 12",
+      "work_hours": 56,
+      "reserve_hours": 48,
+      "cumulative_hours": 552
+    }
+  ],
+  "issues": [
+    {
+      "id": "RO-001",
+      "title": "Choose one simulation task and observation contract",
+      "body": "## Goal\nChoose one simulation task and observation contract for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Pin a low-dimensional task and define resets, actions, termination and success.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/TASK_CONTRACT.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nExplicit version and units; domain-specific success distinct from average return.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nNone beyond explicit project activation.\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M1",
+      "depends_on": [],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "RO-002",
+      "title": "Audit simulator and robot asset rights",
+      "body": "## Goal\nAudit simulator and robot asset rights for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Record provenance and distribution terms for simulator, assets and checkpoints.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/DATA_RIGHTS.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nEvery bundled artifact has a resolved license; unsupported redistribution excluded.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-001\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M1",
+      "depends_on": [
+        "RO-001"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "RO-003",
+      "title": "Measure headless local feasibility",
+      "body": "## Goal\nMeasure headless local feasibility for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Profile baseline episodes without rendering; measure optional GPU separately.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: benchmarks/smoke.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nRecord CPU throughput, peak RAM and deterministic tolerance; shrink episode cap to fit laptop.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-002\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M1",
+      "depends_on": [
+        "RO-002"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "RO-004",
+      "title": "Specify policy release bundle and compatibility",
+      "body": "## Goal\nSpecify policy release bundle and compatibility for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Define policy, schema, task, runtime and provenance versions and compatibility rules.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/BUNDLE_CONTRACT.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nNo copied checkpoint is accepted without source/hash; unsupported combinations fail clearly.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-003\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M1",
+      "depends_on": [
+        "RO-003"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "RO-005",
+      "title": "Record acceptance targets and compute budget",
+      "body": "## Goal\nRecord acceptance targets and compute budget for RobotOps Gate. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Predeclare metric hierarchy, test regime, maximum trials and scope reduction criteria.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/ACCEPTANCE.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nTargets are labeled planned; training, tuning and release evidence have separate budgets.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-004\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "RO-M1",
+      "depends_on": [
+        "RO-004"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "RO-006",
+      "title": "Prepare package and offline CI skeleton",
+      "body": "## Goal\nPrepare package and offline CI skeleton for RobotOps Gate. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Pin supported Python/dependencies and configure typing, lint and small generated tests.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: pyproject.toml; .github/workflows/ci.yml. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nFresh environment runs checks with no dataset download, network key or GPU dependency.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-005\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "RO-M1",
+      "depends_on": [
+        "RO-005"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "RO-007",
+      "title": "Implement reset and scenario manifests",
+      "body": "## Goal\nImplement reset and scenario manifests for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Generate task parameters from fixed seeds and validate supported ranges.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/robotops/scenarios.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nSame seed replays parameters exactly; invalid ranges rejected before rollout.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-006\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M2",
+      "depends_on": [
+        "RO-006"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "RO-008",
+      "title": "Define a bounded policy execution adapter",
+      "body": "## Goal\nDefine a bounded policy execution adapter for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Unify baseline and checkpoint observations/actions with output checks.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/robotops/policies.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nNaN, wrong shape and out-of-bounds actions have explicit failure outcomes.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-007\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M2",
+      "depends_on": [
+        "RO-007"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "RO-009",
+      "title": "Record trajectories and baseline metrics",
+      "body": "## Goal\nRecord trajectories and baseline metrics for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Stream bounded state/action summaries and termination reasons.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/robotops/runner.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nEpisode IDs unique; crash, timeout, truncation and success remain distinct.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-008\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M2",
+      "depends_on": [
+        "RO-008"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "RO-010",
+      "title": "Build adapter registry and compatibility fixture",
+      "body": "## Goal\nBuild adapter registry and compatibility fixture for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Support one pinned task adapter behind a typed boundary.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/robotops/adapters.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nContract suite checks reset/step/termination; unknown adapter names rejected.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-009\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M2",
+      "depends_on": [
+        "RO-009"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "RO-011",
+      "title": "Test domain invariants and invalid inputs",
+      "body": "## Goal\nTest domain invariants and invalid inputs for RobotOps Gate. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Exercise transition conservation, action shapes, units and malformed configs against the chosen domain.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: tests/test_contracts.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nTests fail for injected accounting or contract defects and cover empty/boundary cases.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-010\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "RO-M2",
+      "depends_on": [
+        "RO-010"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "RO-012",
+      "title": "Wire a small CLI vertical slice",
+      "body": "## Goal\nWire a small CLI vertical slice for RobotOps Gate. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Connect validated config, generated scenario, baseline execution and structured output.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/robotops_gate/cli.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nOne command runs locally; invalid configs have a useful error and nonzero exit status.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-011\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "RO-M2",
+      "depends_on": [
+        "RO-011"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:vertical-slice"
+      ],
+      "phase": "vertical-slice"
+    },
+    {
+      "id": "RO-013",
+      "title": "Train or import one compact RL policy",
+      "body": "## Goal\nTrain or import one compact RL policy for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Use maintained PPO/SAC with a small state-based policy and fixed trial budget.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/robotops/train.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nOne learning curve and reproducible evaluation available; random/scripted comparator retained.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-012\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M3",
+      "depends_on": [
+        "RO-012"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "RO-014",
+      "title": "Add parameter perturbation suite",
+      "body": "## Goal\nAdd parameter perturbation suite for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Vary one physically meaningful parameter at a time within supported simulator ranges.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: configs/perturbations.yaml. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nManifest identifies nominal versus shifted conditions; no parameter silently ignored.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-013\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M3",
+      "depends_on": [
+        "RO-013"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "RO-015",
+      "title": "Release a reproducible scorecard demo",
+      "body": "## Goal\nRelease a reproducible scorecard demo for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Run nominal and degraded policy versions and export HTML/JSON.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: examples/demo.yaml. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nClean clone reproduces a failure artifact and all claims are simulation-scoped.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-014\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M3",
+      "depends_on": [
+        "RO-014"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "RO-016",
+      "title": "Export a machine-readable CI release gate",
+      "body": "## Goal\nExport a machine-readable CI release gate for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Return explicit pass/fail/incomplete status and artifact pointers.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/robotops/ci.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nInjected degraded policy fails; interrupted evaluation never produces a passing gate.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-015\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M3",
+      "depends_on": [
+        "RO-015"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "RO-017",
+      "title": "Package reproducible install and examples",
+      "body": "## Goal\nPackage reproducible install and examples for RobotOps Gate. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Pin dependencies, record tested platform and publish minimal synthetic example configs.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/INSTALL.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nClean installation and demo pass on CPU within measured memory/runtime envelope.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-016\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "RO-M3",
+      "depends_on": [
+        "RO-016"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "RO-018",
+      "title": "Review alpha evidence and release boundary",
+      "body": "## Goal\nReview alpha evidence and release boundary for RobotOps Gate. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Run milestone acceptance checks, record failures and narrow scope if needed.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/alpha_acceptance.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nFirst public artifact is runnable, dated relative to activation at or after month3, with limitations and reproducible commands.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-017\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "RO-M3",
+      "depends_on": [
+        "RO-017"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "RO-019",
+      "title": "Freeze validation and regression thresholds",
+      "body": "## Goal\nFreeze validation and regression thresholds for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Choose acceptance on development seeds; reserve held-out seeds and parameter shifts.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: configs/release_gate.yaml. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nThreshold edits versioned; held-out results cannot be used as fresh tuning evidence.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-018\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M4",
+      "depends_on": [
+        "RO-018"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "RO-020",
+      "title": "Run paired robustness comparisons",
+      "body": "## Goal\nRun paired robustness comparisons for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Compare checkpoint versions using shared seeds and per-scenario summaries.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/robustness.json. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nReport uncertainty, failures and slice counts; no unsupported independence assumption.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-019\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M4",
+      "depends_on": [
+        "RO-019"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "RO-021",
+      "title": "Add failure replay artifacts",
+      "body": "## Goal\nAdd failure replay artifacts for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Replay a selected failed seed with optional sparse rendering.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/robotops/replay.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nReplay reconstructs parameters and policy hash; render dependency remains optional.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-020\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M4",
+      "depends_on": [
+        "RO-020"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "RO-022",
+      "title": "Compare release candidate to frozen reference",
+      "body": "## Goal\nCompare release candidate to frozen reference for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Pair seeds and separate metric regression thresholds from hard failures.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/robotops/compare.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nUncertainty and missing scenarios visible; gate does not silently accept missing baseline.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-021\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M4",
+      "depends_on": [
+        "RO-021"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "RO-023",
+      "title": "Register all evaluation runs and failed trials",
+      "body": "## Goal\nRegister all evaluation runs and failed trials for RobotOps Gate. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Store config hashes, seeds, policy version, raw metrics and failed attempts.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/robotops_gate/evaluation_registry.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nDuplicate run identity handled explicitly; selection/tuning history cannot silently overwrite holdout evidence.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-022\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "RO-M4",
+      "depends_on": [
+        "RO-022"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "RO-024",
+      "title": "Make the RL retention decision",
+      "body": "## Goal\nMake the RL retention decision for RobotOps Gate. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Compare strongest baseline and RL under predeclared criteria and resource costs.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/policy_decision.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nKeep, baseline-default or remove RL decision cites measurements and uncertainty; negative results preserved.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-023\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "RO-M4",
+      "depends_on": [
+        "RO-023"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "RO-025",
+      "title": "Handle runner timeouts and cancellation",
+      "body": "## Goal\nHandle runner timeouts and cancellation for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Isolate long rollouts with explicit cancellation and partial results.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/robotops/execution.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nHung policy cannot block the CLI indefinitely; report is marked incomplete.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-024\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M5",
+      "depends_on": [
+        "RO-024"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "RO-026",
+      "title": "Reject unsafe checkpoint formats",
+      "body": "## Goal\nReject unsafe checkpoint formats for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Admit a narrow state-dict/metadata format and validate shapes and hashes.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/robotops/artifacts.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nUntrusted arbitrary-code deserialization excluded; corrupted data rejected.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-025\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M5",
+      "depends_on": [
+        "RO-025"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "RO-027",
+      "title": "Stabilize report and adapter schemas",
+      "body": "## Goal\nStabilize report and adapter schemas for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Version configuration and results; add compatible-load rules.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/robotops/schemas.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nOlder supported report fixture loads; incompatible task version fails explicitly.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-026\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M5",
+      "depends_on": [
+        "RO-026"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "RO-028",
+      "title": "Verify bundle integrity on cold installation",
+      "body": "## Goal\nVerify bundle integrity on cold installation for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Hash all inputs and distinguish integrity checks from trust/signature identity.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: src/robotops/bundles.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nTampered policy or manifest fails before execution; no assertion of signer authenticity from hash alone.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-027\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M5",
+      "depends_on": [
+        "RO-027"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "RO-029",
+      "title": "Test integrated failure and recovery paths",
+      "body": "## Goal\nTest integrated failure and recovery paths for RobotOps Gate. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Inject cancellation, corrupt artifact and partial storage failure through the full workflow.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: tests/test_recovery.py. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nNo incomplete result is reported as success; deterministic recovery or explicit failure verified.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-028\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "RO-M5",
+      "depends_on": [
+        "RO-028"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "RO-030",
+      "title": "Review local operational and security boundary",
+      "body": "## Goal\nReview local operational and security boundary for RobotOps Gate. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Document supported inputs, local-only defaults, log retention, resource caps and upgrade procedure.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/OPERATIONS.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nThreat model covers malformed files and untrusted checkpoints; dependencies/asset rights resolved for release.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-029\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "RO-M5",
+      "depends_on": [
+        "RO-029"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "RO-031",
+      "title": "Add one second task only behind a gate",
+      "body": "## Goal\nAdd one second task only behind a gate for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Evaluate extension effort after first-task reliability and document decision.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/ADAPTER_DECISION.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nEither scoped adapter tests pass or feature is parked without weakening core release.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-030\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M6",
+      "depends_on": [
+        "RO-030"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "RO-032",
+      "title": "Measure CI and local runtime envelopes",
+      "body": "## Goal\nMeasure CI and local runtime envelopes for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Benchmark smoke subset and full suite with fixed hardware details.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/runtime.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nDocument measured installation/runtime ceilings and no GPU requirement.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-031\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M6",
+      "depends_on": [
+        "RO-031"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "RO-033",
+      "title": "Publish limits and product decision",
+      "body": "## Goal\nPublish limits and product decision for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Assess regression workflow and optional developer feedback.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/PRODUCT_DECISION.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nNo claim of physical safety; choose OSS tool/support path only with actual evidence.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-032\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M6",
+      "depends_on": [
+        "RO-032"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "RO-034",
+      "title": "Prototype one external adapter only if justified",
+      "body": "## Goal\nPrototype one external adapter only if justified for RobotOps Gate. Deliver this bounded task within 10 hours including checks and documentation.\n\n## Steps\n1. Evaluate ROS2 or second simulator adapter with bounded compatibility tests.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/INTEGRATION_DECISION.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nWorking first adapter retained; unsupported external environment is parked rather than widening safety claims.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-033\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "RO-M6",
+      "depends_on": [
+        "RO-033"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "RO-035",
+      "title": "Produce versioned release and recorded demonstration",
+      "body": "## Goal\nProduce versioned release and recorded demonstration for RobotOps Gate. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Build installable package, examples, release notes and a short workflow recording.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: docs/RELEASE.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nFresh-clone replay passes; release files include provenance and known failures; no unmeasured performance claim.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-034\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "RO-M6",
+      "depends_on": [
+        "RO-034"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "RO-036",
+      "title": "Close the milestone with evidence and remaining budget",
+      "body": "## Goal\nClose the milestone with evidence and remaining budget for RobotOps Gate. Deliver this bounded task within 8 hours including checks and documentation.\n\n## Steps\n1. Audit acceptance evidence, actual hours and optional user signals; document maintenance or next activation decision.\n2. Verify against the project's domain contract and evidence boundary: Alternative larger scope to SimGuard, not a second implementation to build concurrently. No physical safety certificate, real-robot control or CARLA dependency.\n3. Record exact commands, assumptions, failed checks and actual time.\n\n## Outputs\nPaths relative to this repository: reports/final_review.md. These are future implementation artifacts, not files delivered by this planning issue.\n\n## Acceptance checks\nReviewer can trace every claimed capability to a test/demo; all unresolved work remains explicit and no automatic next project starts.\nTests and reports must identify generated data, seeds, versions and scope. Do not manufacture measured results during planning. If the task exceeds its estimate, propose a split or scope reduction before expanding it.\n\n## Dependencies\nRO-035\nRead docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exit checks must pass. This candidate remains queued until explicit activation.\n\n## Review evidence\nAttach the reviewed diff, exact reproduction commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets; document unexecuted checks and unavailable external validation. Done requires review and merge, not merely publishing this issue.\n\n## Blocker procedure\nRecord the smallest failing example, affected dependency and missing prerequisite. Keep dependent work queued. Use the milestone's remaining reserve or propose a narrower supported scope. Unknown rights block the asset; select a permitted generated fallback. Escalate changes to intended use, budget or release criteria before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "RO-M6",
+      "depends_on": [
+        "RO-035"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    }
+  ]
+}
